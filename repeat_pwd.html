@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>重置密码</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<link rel="stylesheet" type="text/css" href="css/alison_base.css"/>
+		<link rel="stylesheet"  type="text/css" href="css/aui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/repeat_pwd.css"/>
+	</head>
+	<body>
+		<header class="header-bar">
+		<a class="pull-left-arrow" onclick="history.go(-1)">
+			<span class="icon-arrow"></span>
+		</a>
+		<div class="header-title">
+		重置密码
+		</div>
+		</header>
+		<div class="main">
+			<div class="login-header">
+				<!--login-header-img背景图在CSS里-->
+				<div class="login-header-img">
+				</div>
+				<div class="login-inner ellipsis-2">
+					由2~20位字母加数字组成的密码
+				</div>
+			</div>
+		</div>
+		<form class="login-input">
+			 <div class="phone_input flex flex-vertical">
+				 <label id="_phone">密码</label>
+				 <input oninput="iphones()" type="password" placeholder="输入密码" id="first_psw">
+				 <i class="input_icon" onclick="change_bg(this)">
+					 <img src="images/password_icom_invisible@2x.png" >
+					 </i>
+			 </div>
+			 <div class="check-number clearfix">
+				  <label for="_num" class="fl">再次输入密码</label>
+				  <input oninput="iphones()" type="password"  placeholder="确认密码" class="fl" id="send_psw"/>
+				  <i class="input_icon psw-icon" onclick="change_bg(this)">
+					<img src="images/password_icom_invisible@2x.png" ></i>
+			 </div>
+		</form>
+		 <div class="login-next-step flex flex-middle">
+			  <a href="javascript:" class="default-next comfirm-btn" onclick="comfirm_btn()">重置密码</a>
+		 </div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/aui-toast.js"></script>
+	<script src="js/repeat_pwd.js"></script>
+	<script>
+	</script>
+<ml>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>身份验证</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" type="text/css" href="css/alison_base.css" />
+    <link rel="stylesheet" type="text/css" href="css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="css/id_validation.css" />
+</head>
+
+<body>
+    <header class="header-bar">
+        <a class="pull-left-arrow" onclick="history.go(-1)"">
+            <span class="icon-arrow"></span>
+        </a>
+        <div class="header-title">
+            身份验证
+        </div>
+    </header>
+    <div class="main">
+        <div class="login-header">
+            <!--login-header-img背景图在CSS里-->
+            <div class="login-header-img">
+            </div>
+            <div class="login-inner ellipsis-2">
+                输入正确的手机号并通过验证
+            </div>
+        </div>
+    </div>
+    <form class="login-input">
+        <div class="phone_input flex flex-vertical">
+            <label id="_phone">手机号码</label>
+            <input oninput="iphones()" type="tel" placeholder="请输入正确手机号码" id="mobel">
+        </div>
+        <div class="check-number clearfix">
+            <label for="_num" class="fl">验证码</label>
+            <input oninput="iphones()" type="text" placeholder="请输入验证码.." id="_num" class="fl" />
+            <span class="get-code  aui-text-right fr active-code" onclick="getCode()">获取验证码</span>
+        </div>
+        <div class="ques-link" onclick="prop_msk_win()">手机无法验证?</div>
+    </form>
+    <div class="login-next-step flex flex-middle">
+        <a href="javascript:" class="default-next comfirm-btn" onclick="comfirm_btn()">下一步</a>
+    </div>
+    <div class="prop-mask">
+        <div class="prop-win">
+            <span class="ques-header">手机无法验证？</span>
+            <div class="prop-content">
+                <div class="prop-email" onclick="openDialog('邮箱验证')">邮箱验证</div>
+                <div class="prop-online-waiter" onclick="openDialog('联系在线客服')">联系在线客服</div>
+            </div>
+            <div class="cancel-btn" onclick="cancel_btn(this)"> 取消</div>
+        </div>
+
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/aui-toast.js"></script>
+<script src="js/aui-dialog.js"></script>
+<script src="js/id_validation.js"></script>
+<script>
+</script>
+
+</html>
